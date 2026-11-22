@@ -499,12 +499,15 @@ document.addEventListener('DOMContentLoaded', () => {
             email: email,
             subject: subject || 'New Portfolio Dispatch',
             message: message,
-            _subject: `[Portfolio Dispatch] ${subject || 'New Message'} from ${name}`,
-            _template: 'table'
+            _captcha: "false",
+            _template: 'table',
+            _subject: `[Portfolio Dispatch] ${subject || 'New Message'} from ${name}`
           })
         });
 
-        if (response.ok) {
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && (data.success === true || data.success === "true")) {
           showToast(`Dispatch transmitted! Delivered to Aashi.`, '✓');
           if (contactFormStatus) {
             contactFormStatus.style.display = 'block';
@@ -514,8 +517,17 @@ document.addEventListener('DOMContentLoaded', () => {
             contactFormStatus.innerHTML = `&check; <strong>Dispatch Delivered:</strong> Thank you, ${name}! Your message has been transmitted directly to Aashi's inbox.`;
           }
           contactForm.reset();
+        } else if (data.message && data.message.toLowerCase().includes('activation')) {
+          showToast(`Activation required: Check aashimaahi23@gmail.com`, '⚠');
+          if (contactFormStatus) {
+            contactFormStatus.style.display = 'block';
+            contactFormStatus.style.background = 'rgba(99, 45, 56, 0.12)';
+            contactFormStatus.style.borderColor = 'var(--color-burgundy)';
+            contactFormStatus.style.color = 'var(--color-dark-brown)';
+            contactFormStatus.innerHTML = `&#9888; <strong>Activation Email Sent:</strong> FormSubmit sent a one-time activation link to <strong>aashimaahi23@gmail.com</strong>. Please check your Inbox (or Spam folder) and click <em>"Activate Form"</em> to enable incoming dispatches!`;
+          }
         } else {
-          throw new Error('FormSubmit endpoint response not OK');
+          throw new Error(data.message || 'FormSubmit endpoint response not OK');
         }
       } catch (err) {
         // Fallback to mailto client opener
