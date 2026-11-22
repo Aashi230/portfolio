@@ -323,6 +323,8 @@ img {
   display: flex;
   align-items: center;
   gap: 14px;
+  flex-shrink: 0;
+  min-width: max-content;
 }
 
 .brand-monogram {
@@ -340,6 +342,7 @@ img {
   background: var(--bg-card);
   box-shadow: 3px 3px 0 var(--color-burgundy);
   transition: all var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .brand-link:hover .brand-monogram {
@@ -350,6 +353,7 @@ img {
 .brand-text-wrap {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .brand-name {
@@ -359,15 +363,17 @@ img {
   color: var(--color-dark-brown);
   line-height: 1.1;
   letter-spacing: -0.3px;
+  white-space: nowrap;
 }
 
 .brand-sub {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--color-olive);
+  font-size: 0.74rem;
+  color: var(--color-burgundy);
   letter-spacing: 1.4px;
   text-transform: uppercase;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .nav-menu {
@@ -1072,13 +1078,15 @@ img {
 .portrait-caption {
   margin-top: 14px;
   text-align: center;
-  padding: 8px 4px 2px;
+  padding: 10px 4px 4px;
   border-top: 1px solid var(--color-dark-brown);
+  position: relative;
+  z-index: 7;
 }
 
 .portrait-caption-title {
   font-family: var(--font-serif-heading);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--color-dark-brown);
   letter-spacing: 0.5px;
@@ -1086,16 +1094,17 @@ img {
 
 .portrait-caption-meta {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--color-burgundy);
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-top: 2px;
+  font-weight: 700;
+  margin-top: 3px;
 }
 
 .portrait-floating-stamp {
   position: absolute;
-  bottom: 22px;
+  top: 18px;
   right: -14px;
   background: var(--color-dark-brown);
   color: var(--color-ivory);
@@ -2878,17 +2887,17 @@ textarea.form-control {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   .nav-menu {
-    gap: 16px;
+    gap: 14px;
   }
   .nav-link {
-    font-size: 0.95rem;
-    letter-spacing: 1px;
+    font-size: 0.92rem;
+    letter-spacing: 0.8px;
   }
   .nav-actions .btn-sm {
-    padding: 8px 16px;
-    font-size: 0.92rem;
+    padding: 7px 14px;
+    font-size: 0.86rem;
   }
 }
 
@@ -2931,7 +2940,7 @@ textarea.form-control {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   :root {
     --header-height: 68px;
   }
@@ -2963,6 +2972,28 @@ textarea.form-control {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-monogram {
+    width: 38px;
+    height: 38px;
+    font-size: 1.15rem;
+  }
+  .brand-name {
+    font-size: 1.16rem;
+  }
+  .brand-sub {
+    font-size: 0.68rem;
+  }
+  .editorial-top-strip {
+    font-size: 0.74rem;
+    padding: 7px 0;
+  }
+  .top-strip-inner {
+    justify-content: center;
+    text-align: center;
   }
   .id-photos-spread-grid-gdg {
     grid-template-columns: 1fr;
@@ -3003,6 +3034,15 @@ textarea.form-control {
 }
 
 @media (max-width: 480px) {
+  .brand-link {
+    gap: 10px;
+  }
+  .brand-name {
+    font-size: 1.05rem;
+  }
+  .brand-sub {
+    font-size: 0.62rem;
+  }
   .hero-cta-group {
     flex-direction: column;
     align-items: stretch;
@@ -3021,8 +3061,10 @@ textarea.form-control {
   .vintage-rubber-stamp {
     width: 82px;
     height: 82px;
-    right: -6px;
-    bottom: -12px;
+    top: -12px;
+    left: -10px;
+    bottom: auto;
+    right: auto;
   }
   .vintage-rubber-stamp .stamp-arch-text {
     font-size: 0.44rem;

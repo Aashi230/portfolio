@@ -454,15 +454,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ========================================================================
-  // 9. CONTACT FORM VALIDATION & SUBMISSION
+  // 9. CONTACT FORM VALIDATION & SUBMISSION (TRANSMIT TO GMAIL)
   // ========================================================================
   const contactForm = document.getElementById('contactForm');
+  const btnSubmitForm = document.getElementById('btnSubmitForm');
+  const contactFormStatus = document.getElementById('contactFormStatus');
+
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const name = document.getElementById('contactName').value.trim();
       const email = document.getElementById('contactEmail').value.trim();
+      const subject = document.getElementById('contactSubject') ? document.getElementById('contactSubject').value.trim() : 'Portfolio Inquiry';
       const message = document.getElementById('contactMessage').value.trim();
 
       if (!name || !email || !message) {
@@ -476,8 +480,63 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      showToast(`Thank you, ${name}! Your dispatch has been recorded.`, '✓');
-      contactForm.reset();
+      // Indicate transmission in progress
+      const originalBtnHTML = btnSubmitForm ? btnSubmitForm.innerHTML : 'Transmit Message';
+      if (btnSubmitForm) {
+        btnSubmitForm.disabled = true;
+        btnSubmitForm.innerHTML = `<span>Transmitting Dispatch...</span> <span class="status-pulse-dot" style="margin-left: 8px;"></span>`;
+      }
+
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/aashimaahi23@gmail.com", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            subject: subject || 'New Portfolio Dispatch',
+            message: message,
+            _subject: `[Portfolio Dispatch] ${subject || 'New Message'} from ${name}`,
+            _template: 'table'
+          })
+        });
+
+        if (response.ok) {
+          showToast(`Dispatch transmitted! Delivered to Aashi.`, '✓');
+          if (contactFormStatus) {
+            contactFormStatus.style.display = 'block';
+            contactFormStatus.style.background = 'rgba(104, 106, 76, 0.15)';
+            contactFormStatus.style.borderColor = 'var(--color-olive)';
+            contactFormStatus.style.color = 'var(--color-dark-brown)';
+            contactFormStatus.innerHTML = `&check; <strong>Dispatch Delivered:</strong> Thank you, ${name}! Your message has been transmitted directly to Aashi's inbox.`;
+          }
+          contactForm.reset();
+        } else {
+          throw new Error('FormSubmit endpoint response not OK');
+        }
+      } catch (err) {
+        // Fallback to mailto client opener
+        const encodedSubject = encodeURIComponent(subject || `Portfolio Dispatch from ${name}`);
+        const encodedBody = encodeURIComponent(`From: ${name} (${email})\n\nMessage:\n${message}`);
+        window.location.href = `mailto:aashimaahi23@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+
+        showToast(`Preparing email to aashimaahi23@gmail.com...`, '✓');
+        if (contactFormStatus) {
+          contactFormStatus.style.display = 'block';
+          contactFormStatus.style.background = 'rgba(99, 45, 56, 0.1)';
+          contactFormStatus.style.borderColor = 'var(--color-burgundy)';
+          contactFormStatus.style.color = 'var(--color-dark-brown)';
+          contactFormStatus.innerHTML = `&nearr; <strong>Email Client Prepared:</strong> Message drafted to <code>aashimaahi23@gmail.com</code>.`;
+        }
+      } finally {
+        if (btnSubmitForm) {
+          btnSubmitForm.disabled = false;
+          btnSubmitForm.innerHTML = originalBtnHTML;
+        }
+      }
     });
   }
 
