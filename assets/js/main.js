@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tag: 'SMART INDIA HACKATHON 2026 // INTERNAL SELECTION CLEARED',
       title: 'ARS Tourist Guide',
       subtitle: 'Cleared University-Level Internal Round • Problem Statement SIH26207 • Team TOTAL CODERS',
-      github: 'https://github.com/Aashi230',
+      github: null,
       content: `
         <div style="font-size: 0.96rem; line-height: 1.7; color: var(--text-secondary);">
           <p style="margin-bottom: 14px;">
@@ -379,7 +379,13 @@ document.addEventListener('DOMContentLoaded', () => {
     modalProjectTitle.textContent = data.title;
     modalProjectSubtitle.textContent = data.subtitle;
     modalProjectContent.innerHTML = data.content;
-    modalProjectGithubLink.href = data.github;
+
+    if (data.github) {
+      modalProjectGithubLink.href = data.github;
+      modalProjectGithubLink.style.display = 'inline-flex';
+    } else {
+      modalProjectGithubLink.style.display = 'none';
+    }
 
     projectModal.classList.add('active');
     document.body.style.overflow = 'hidden';
