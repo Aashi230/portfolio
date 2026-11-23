@@ -207,7 +207,7 @@ pm1.font.bold = True
 pm1.font.color.rgb = COLOR_TEXT_LIGHT
 
 pm2 = tf_meta.add_paragraph()
-pm2.text = "B.Tech Computer Science Engineering (Artificial Intelligence & Data Science)"
+pm2.text = "B.Tech CSE (AI & Data Science) • Student & Tech Learner • Aspiring Data Analyst"
 pm2.font.name = FONT_SANS
 pm2.font.size = Pt(12)
 pm2.font.bold = True
@@ -301,7 +301,7 @@ p.font.bold = True
 p.font.color.rgb = COLOR_OLIVE
 
 p = tf2.add_paragraph()
-p.text = "Student & Tech Learner"
+p.text = "Student & Aspiring Data Analyst"
 p.font.name = FONT_SERIF
 p.font.size = Pt(18)
 p.font.bold = True
@@ -309,8 +309,8 @@ p.font.color.rgb = COLOR_TEXT_DARK
 p.space_before = Pt(4)
 
 p = tf2.add_paragraph()
-p.text = ("Built specifically to showcase Aashi's journey as an undergraduate Student & Curious Tech Learner in AI & Data Science. "
-          "The portfolio highlights continuous experimentation, foundational programming, algorithmic problem-solving, "
+p.text = ("Built specifically to showcase Aashi's journey as an active Student & Tech Learner targeting Aspiring Data Analyst roles. "
+          "Combines 4-year Java fundamentals (grades 9–12) with Python data analytics, algorithmic problem-solving, "
           "and certified academic distinction (SRMU Lucknow CGPA 8.29).")
 p.font.name = FONT_SANS
 p.font.size = Pt(11.5)
@@ -798,16 +798,16 @@ p.font.size = Pt(10)
 p.font.bold = True
 p.font.color.rgb = COLOR_BURGUNDY
 p = tf_s1.add_paragraph()
-p.text = "Python • C • C++ • SQL • JavaScript"
+p.text = "Java • Python • C • C++ • SQL • JavaScript"
 p.font.name = FONT_SERIF
 p.font.size = Pt(16)
 p.font.bold = True
 p.font.color.rgb = COLOR_TEXT_DARK
 p = tf_s1.add_paragraph()
-p.text = ("• Strong algorithmic foundation in C/C++ (certified by SRMU CSE Department).\n"
+p.text = ("• 4-year Java foundation (Grades 9–12): Object-Oriented Programming, classes & methods.\n"
           "• Python expertise for data structures, automation, statistical modeling, and scripting.\n"
-          "• Relational database querying with SQL (joins, subqueries, aggregations).\n"
-          "• Modern ES6+ JavaScript for DOM manipulation and asynchronous APIs.")
+          "• Strong algorithmic foundation in C/C++ (certified by SRMU CSE Department).\n"
+          "• Relational database querying with SQL and modern ES6+ JavaScript for web interactivity.")
 p.font.name = FONT_SANS
 p.font.size = Pt(11)
 p.font.color.rgb = COLOR_TEXT_MUTED
