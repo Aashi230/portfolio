@@ -895,15 +895,73 @@ p.font.color.rgb = COLOR_TEXT_MUTED
 p.space_before = Pt(4)
 
 # ==============================================================================
-# SLIDE 9: CURRICULUM VITAE & RECENT VISUAL FIX
+# SLIDE 9: ANDROID NOVA 2.0 (FLAGSHIP SYMPOSIUM HOST - ALL 5 FRAMES + CERTIFICATE)
 # ==============================================================================
 slide9 = prs.slides.add_slide(blank_layout)
 set_slide_background(slide9, COLOR_PARCHMENT)
-add_header(slide9, "CHAPTER 06 / CURRICULUM VITAE", "The Professional CV & Layout Polish",
+add_header(slide9, "CHAPTER 05 / LEADERSHIP & PUBLIC SPEAKING", "Android Nova 2.0 — Flagship Stage Host & Coordinator",
+           "Official master of ceremonies leading SRMU's premier technical symposium with all 5 event frames.")
+
+# Left Card: Narrative & Certificate
+left_nova_w = Inches(3.85)
+add_card_box(slide9, Inches(0.8), top_pos, left_nova_w, Inches(4.9))
+t_nv = slide9.shapes.add_textbox(Inches(1.0), top_pos + Inches(0.18), left_nova_w - Inches(0.4), Inches(2.2))
+f_nv = t_nv.text_frame
+f_nv.word_wrap = True
+
+p = f_nv.paragraphs[0]
+p.text = "OFFICIAL SYMPOSIUM HOST"
+p.font.name = FONT_MONO
+p.font.size = Pt(10)
+p.font.bold = True
+p.font.color.rgb = COLOR_BURGUNDY
+
+p = f_nv.add_paragraph()
+p.text = "Poise, Stage Leadership & Logistics"
+p.font.name = FONT_SERIF
+p.font.size = Pt(14)
+p.font.bold = True
+p.font.color.rgb = COLOR_TEXT_DARK
+p.space_before = Pt(3)
+
+p = f_nv.add_paragraph()
+p.text = ("• Selected as official stage anchor for Android Nova 2.0 before hundreds of attendees, faculty & industry speakers.\n"
+          "• Directed live speaker cadence, audience engagement, and dignitary felicitations on the main stage.\n"
+          "• Coordinated backstage logistics, technical timing synchronizations, and organizing committee operations.")
+p.font.name = FONT_SANS
+p.font.size = Pt(10.5)
+p.font.color.rgb = COLOR_TEXT_MUTED
+p.space_before = Pt(4)
+
+# Certificate Preview inside left card
+add_image_card(slide9, Inches(1.0), top_pos + Inches(2.55), left_nova_w - Inches(0.4), Inches(2.2),
+               "presentation_assets/nova_cert.jpg", "SRMU Official Host Certificate")
+
+# Right Area: 5 Photo Spread
+# Top Row
+add_image_card(slide9, Inches(4.85), top_pos, Inches(2.4), Inches(2.35),
+               "presentation_assets/nova_1.jpg", "Frame 01: Stage Anchoring")
+add_image_card(slide9, Inches(7.45), top_pos, Inches(2.7), Inches(2.35),
+               "presentation_assets/nova_2.jpg", "Frame 02: Keynote & Audience")
+add_image_card(slide9, Inches(10.35), top_pos, Inches(2.183), Inches(2.35),
+               "presentation_assets/nova_3.jpg", "Frame 03: Organizing Desk")
+
+# Bottom Row
+add_image_card(slide9, Inches(4.85), top_pos + Inches(2.55), Inches(3.75), Inches(2.35),
+               "presentation_assets/nova_4.jpg", "Frame 04: Dignitary Felicitation")
+add_image_card(slide9, Inches(8.8), top_pos + Inches(2.55), Inches(3.733), Inches(2.35),
+               "presentation_assets/nova_5.jpg", "Frame 05: Host Portrait with Mic")
+
+# ==============================================================================
+# SLIDE 10: CURRICULUM VITAE & RECENT VISUAL FIX
+# ==============================================================================
+slide10 = prs.slides.add_slide(blank_layout)
+set_slide_background(slide10, COLOR_PARCHMENT)
+add_header(slide10, "CHAPTER 06 / CURRICULUM VITAE", "The Professional CV & Layout Polish",
            "Clean editorial parchment presentation with direct official PDF resume download.")
 
-add_card_box(slide9, Inches(0.8), top_pos, left_w, Inches(4.9))
-t_cv = slide9.shapes.add_textbox(Inches(1.05), top_pos + Inches(0.25), left_w - Inches(0.5), Inches(4.4))
+add_card_box(slide10, Inches(0.8), top_pos, left_w, Inches(4.9))
+t_cv = slide10.shapes.add_textbox(Inches(1.05), top_pos + Inches(0.25), left_w - Inches(0.5), Inches(4.4))
 f_cv = t_cv.text_frame
 f_cv.word_wrap = True
 
@@ -962,20 +1020,20 @@ p.font.size = Pt(11)
 p.font.color.rgb = COLOR_TEXT_MUTED
 
 # Right Column: Screenshot Card
-add_image_card(slide9, Inches(6.8), top_pos, Inches(5.733), Inches(4.9), 
+add_image_card(slide10, Inches(6.8), top_pos, Inches(5.733), Inches(4.9), 
                "presentation_assets/04_resume_cv.png", 
                "LIVE CAPTURE: Clean Parchment Curriculum Vitae (Commit e0dd2cf)")
 
 # ==============================================================================
-# SLIDE 10: CONTACT & LIVE MESSAGE DISPATCH
+# SLIDE 11: CONTACT & LIVE MESSAGE DISPATCH
 # ==============================================================================
-slide10 = prs.slides.add_slide(blank_layout)
-set_slide_background(slide10, COLOR_PARCHMENT)
-add_header(slide10, "CHAPTER 07 / CORRESPONDENCE", "Live Dispatch System & Email Transmission",
+slide11 = prs.slides.add_slide(blank_layout)
+set_slide_background(slide11, COLOR_PARCHMENT)
+add_header(slide11, "CHAPTER 07 / CORRESPONDENCE", "Live Dispatch System & Email Transmission",
            "Instant communication pipeline connecting visitors directly to Aashi's inbox.")
 
-add_card_box(slide10, Inches(0.8), top_pos, left_w, Inches(4.9))
-t_cnt = slide10.shapes.add_textbox(Inches(1.05), top_pos + Inches(0.25), left_w - Inches(0.5), Inches(4.4))
+add_card_box(slide11, Inches(0.8), top_pos, left_w, Inches(4.9))
+t_cnt = slide11.shapes.add_textbox(Inches(1.05), top_pos + Inches(0.25), left_w - Inches(0.5), Inches(4.4))
 f_cnt = t_cnt.text_frame
 f_cnt.word_wrap = True
 
@@ -1034,21 +1092,21 @@ p.font.size = Pt(11)
 p.font.color.rgb = COLOR_TEXT_MUTED
 
 # Right Column: Screenshot Card
-add_image_card(slide10, Inches(6.8), top_pos, Inches(5.733), Inches(4.9), 
+add_image_card(slide11, Inches(6.8), top_pos, Inches(5.733), Inches(4.9), 
                "presentation_assets/05_contact_footer.png", 
                "LIVE CAPTURE: Chapter 07 Correspondence & Live Dispatch Form")
 
 # ==============================================================================
-# SLIDE 11: FOOTER, COLOPHON & RESPONSIVE ASSURANCE
+# SLIDE 12: FOOTER, COLOPHON & RESPONSIVE ASSURANCE
 # ==============================================================================
-slide11 = prs.slides.add_slide(blank_layout)
-set_slide_background(slide11, COLOR_PARCHMENT)
-add_header(slide11, "FOOTER & COLOPHON", "The Editorial Colophon & Cross-Device Rigor",
+slide12 = prs.slides.add_slide(blank_layout)
+set_slide_background(slide12, COLOR_PARCHMENT)
+add_header(slide12, "FOOTER & COLOPHON", "The Editorial Colophon & Cross-Device Rigor",
            "Attention to archival detail, typographic credits, and responsive fluid design.")
 
 # Left Card: Colophon Details
-add_card_box(slide11, Inches(0.8), top_pos, Inches(5.6), Inches(4.9))
-t_col = slide11.shapes.add_textbox(Inches(1.05), top_pos + Inches(0.25), Inches(5.1), Inches(4.4))
+add_card_box(slide12, Inches(0.8), top_pos, Inches(5.6), Inches(4.9))
+t_col = slide12.shapes.add_textbox(Inches(1.05), top_pos + Inches(0.25), Inches(5.1), Inches(4.4))
 f_col = t_col.text_frame
 f_col.word_wrap = True
 
@@ -1109,8 +1167,8 @@ p.font.size = Pt(11)
 p.font.color.rgb = COLOR_TEXT_MUTED
 
 # Right Card: Responsive Quality Assurance
-add_card_box(slide11, Inches(6.933), top_pos, Inches(5.6), Inches(4.9))
-t_qa = slide11.shapes.add_textbox(Inches(7.183), top_pos + Inches(0.25), Inches(5.1), Inches(4.4))
+add_card_box(slide12, Inches(6.933), top_pos, Inches(5.6), Inches(4.9))
+t_qa = slide12.shapes.add_textbox(Inches(7.183), top_pos + Inches(0.25), Inches(5.1), Inches(4.4))
 f_qa = t_qa.text_frame
 f_qa.word_wrap = True
 
@@ -1159,24 +1217,24 @@ p.font.color.rgb = COLOR_BURGUNDY
 p.space_before = Pt(4)
 
 # ==============================================================================
-# SLIDE 12: CONCLUSION, LIVE LINKS & FUTURE ROADMAP
+# SLIDE 13: CONCLUSION, LIVE LINKS & FUTURE ROADMAP
 # ==============================================================================
-slide12 = prs.slides.add_slide(blank_layout)
-set_slide_background(slide12, COLOR_DARK_BG)
+slide13 = prs.slides.add_slide(blank_layout)
+set_slide_background(slide13, COLOR_DARK_BG)
 
 # Decorative double border
-ob12 = slide12.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.5), Inches(0.5), Inches(12.333), Inches(6.5))
+ob12 = slide13.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.5), Inches(0.5), Inches(12.333), Inches(6.5))
 ob12.fill.background()
 ob12.line.color.rgb = COLOR_GOLD
 ob12.line.width = Pt(1.5)
 
-ib12 = slide12.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.6), Inches(0.6), Inches(12.133), Inches(6.3))
+ib12 = slide13.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.6), Inches(0.6), Inches(12.133), Inches(6.3))
 ib12.fill.background()
 ib12.line.color.rgb = COLOR_BURGUNDY
 ib12.line.width = Pt(0.75)
 
 # Heading
-tb_c_top = slide12.shapes.add_textbox(Inches(1.0), Inches(0.85), Inches(11.333), Inches(0.35))
+tb_c_top = slide13.shapes.add_textbox(Inches(1.0), Inches(0.85), Inches(11.333), Inches(0.35))
 p = tb_c_top.text_frame.paragraphs[0]
 p.text = "FINAL DISPATCH • PORTFOLIO MILESTONES & NEXT HORIZONS"
 p.font.name = FONT_MONO
@@ -1185,7 +1243,7 @@ p.font.bold = True
 p.font.color.rgb = COLOR_GOLD
 p.alignment = PP_ALIGN.CENTER
 
-tb_c_title = slide12.shapes.add_textbox(Inches(1.0), Inches(1.3), Inches(11.333), Inches(1.1))
+tb_c_title = slide13.shapes.add_textbox(Inches(1.0), Inches(1.3), Inches(11.333), Inches(1.1))
 tf_c = tb_c_title.text_frame
 tf_c.word_wrap = True
 p = tf_c.paragraphs[0]
@@ -1205,9 +1263,9 @@ p.alignment = PP_ALIGN.CENTER
 p.space_before = Pt(4)
 
 # 2 Bottom Cards
-c_left = add_card_box(slide12, Inches(1.2), Inches(2.6), Inches(5.2), Inches(3.8), 
+c_left = add_card_box(slide13, Inches(1.2), Inches(2.6), Inches(5.2), Inches(3.8), 
                       bg_color=RGBColor(38, 29, 23), border_color=COLOR_GOLD)
-t_cl = slide12.shapes.add_textbox(Inches(1.45), Inches(2.8), Inches(4.7), Inches(3.4))
+t_cl = slide13.shapes.add_textbox(Inches(1.45), Inches(2.8), Inches(4.7), Inches(3.4))
 tf_cl = t_cl.text_frame
 tf_cl.word_wrap = True
 p = tf_cl.paragraphs[0]
@@ -1260,9 +1318,9 @@ p.font.size = Pt(11)
 p.font.color.rgb = RGBColor(200, 190, 180)
 
 # Right Card: Access & Verification
-c_right = add_card_box(slide12, Inches(6.933), Inches(2.6), Inches(5.2), Inches(3.8), 
+c_right = add_card_box(slide13, Inches(6.933), Inches(2.6), Inches(5.2), Inches(3.8), 
                        bg_color=RGBColor(38, 29, 23), border_color=COLOR_BURGUNDY)
-t_cr = slide12.shapes.add_textbox(Inches(7.183), Inches(2.8), Inches(4.7), Inches(3.4))
+t_cr = slide13.shapes.add_textbox(Inches(7.183), Inches(2.8), Inches(4.7), Inches(3.4))
 tf_cr = t_cr.text_frame
 tf_cr.word_wrap = True
 p = tf_cr.paragraphs[0]
