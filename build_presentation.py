@@ -900,7 +900,7 @@ p.space_before = Pt(4)
 slide9 = prs.slides.add_slide(blank_layout)
 set_slide_background(slide9, COLOR_PARCHMENT)
 add_header(slide9, "CHAPTER 05 / LEADERSHIP & PUBLIC SPEAKING", "Android Nova 2.0 — Flagship Stage Host & Coordinator",
-           "Official master of ceremonies leading SRMU's premier technical symposium with all 5 live event frames.")
+           "Master of ceremonies leading SRMU's premier technical symposium with all 5 live event frames.")
 
 # Left Card: Executive Narrative & Milestone Details
 left_nova_w = Inches(3.5)
@@ -910,7 +910,7 @@ f_nv = t_nv.text_frame
 f_nv.word_wrap = True
 
 p = f_nv.paragraphs[0]
-p.text = "OFFICIAL SYMPOSIUM HOST"
+p.text = "SYMPOSIUM HOST & COORDINATOR"
 p.font.name = FONT_MONO
 p.font.size = Pt(10)
 p.font.bold = True
@@ -925,7 +925,7 @@ p.font.color.rgb = COLOR_TEXT_DARK
 p.space_before = Pt(3)
 
 p = f_nv.add_paragraph()
-p.text = ("• Selected as official stage anchor for Android Nova 2.0 before hundreds of attendees, faculty, and industry speakers.\n"
+p.text = ("• Selected as stage anchor for Android Nova 2.0 before hundreds of attendees, faculty, and industry speakers.\n"
           "• Commanded the auditorium stage with poise, speaker introductions, and dignitary felicitations.\n"
           "• Orchestrated backstage logistics, synchronization across technical teams, and audio-visual flow.\n"
           "• Demonstrated high-stakes public speaking, rapid adaptability, and large-audience engagement.")
@@ -943,7 +943,7 @@ p.font.color.rgb = COLOR_OLIVE
 p.space_before = Pt(8)
 
 p = f_nv.add_paragraph()
-p.text = ("• Role: Lead Stage Anchor & Event Host\n"
+p.text = ("• Role: Stage Anchor & Event Host\n"
           "• Institution: SRMU Lucknow\n"
           "• Scope: Flagship University Symposium\n"
           "• Documentation: 5 Live Stage Frames Below")
