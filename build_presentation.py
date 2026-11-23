@@ -618,7 +618,7 @@ p = f_hero.add_paragraph()
 p.text = ("• 8.29 CGPA Academic Distinction at SRMU Lucknow\n"
           "• 4+ Flagship Engineering Projects (AI, Hackathons, Web)\n"
           "• Smart India Hackathon (SIH 2026) Selection\n"
-          "• GDG DevFest Builder & Android Nova Certified")
+          "• GDG DevFest Builder & Android Nova Host")
 p.font.name = FONT_MONO
 p.font.size = Pt(10.5)
 p.font.color.rgb = COLOR_OLIVE
@@ -895,17 +895,17 @@ p.font.color.rgb = COLOR_TEXT_MUTED
 p.space_before = Pt(4)
 
 # ==============================================================================
-# SLIDE 9: ANDROID NOVA 2.0 (FLAGSHIP SYMPOSIUM HOST - ALL 5 FRAMES + CERTIFICATE)
+# SLIDE 9: ANDROID NOVA 2.0 (FLAGSHIP SYMPOSIUM HOST - ALL 5 LIVE FRAMES)
 # ==============================================================================
 slide9 = prs.slides.add_slide(blank_layout)
 set_slide_background(slide9, COLOR_PARCHMENT)
 add_header(slide9, "CHAPTER 05 / LEADERSHIP & PUBLIC SPEAKING", "Android Nova 2.0 — Flagship Stage Host & Coordinator",
-           "Official master of ceremonies leading SRMU's premier technical symposium with all 5 event frames.")
+           "Official master of ceremonies leading SRMU's premier technical symposium with all 5 live event frames.")
 
-# Left Card: Narrative & Certificate
-left_nova_w = Inches(3.85)
+# Left Card: Executive Narrative & Milestone Details
+left_nova_w = Inches(3.5)
 add_card_box(slide9, Inches(0.8), top_pos, left_nova_w, Inches(4.9))
-t_nv = slide9.shapes.add_textbox(Inches(1.0), top_pos + Inches(0.18), left_nova_w - Inches(0.4), Inches(2.2))
+t_nv = slide9.shapes.add_textbox(Inches(1.0), top_pos + Inches(0.2), left_nova_w - Inches(0.4), Inches(4.5))
 f_nv = t_nv.text_frame
 f_nv.word_wrap = True
 
@@ -917,40 +917,55 @@ p.font.bold = True
 p.font.color.rgb = COLOR_BURGUNDY
 
 p = f_nv.add_paragraph()
-p.text = "Poise, Stage Leadership & Logistics"
+p.text = "Stage Leadership & Poise"
 p.font.name = FONT_SERIF
-p.font.size = Pt(14)
+p.font.size = Pt(15)
 p.font.bold = True
 p.font.color.rgb = COLOR_TEXT_DARK
 p.space_before = Pt(3)
 
 p = f_nv.add_paragraph()
-p.text = ("• Selected as official stage anchor for Android Nova 2.0 before hundreds of attendees, faculty & industry speakers.\n"
-          "• Directed live speaker cadence, audience engagement, and dignitary felicitations on the main stage.\n"
-          "• Coordinated backstage logistics, technical timing synchronizations, and organizing committee operations.")
+p.text = ("• Selected as official stage anchor for Android Nova 2.0 before hundreds of attendees, faculty, and industry speakers.\n"
+          "• Commanded the auditorium stage with poise, speaker introductions, and dignitary felicitations.\n"
+          "• Orchestrated backstage logistics, synchronization across technical teams, and audio-visual flow.\n"
+          "• Demonstrated high-stakes public speaking, rapid adaptability, and large-audience engagement.")
 p.font.name = FONT_SANS
 p.font.size = Pt(10.5)
 p.font.color.rgb = COLOR_TEXT_MUTED
-p.space_before = Pt(4)
+p.space_before = Pt(5)
 
-# Certificate Preview inside left card
-add_image_card(slide9, Inches(1.0), top_pos + Inches(2.55), left_nova_w - Inches(0.4), Inches(2.2),
-               "presentation_assets/nova_cert.jpg", "SRMU Official Host Certificate")
+p = f_nv.add_paragraph()
+p.text = "EVENT DOSSIER & IMPACT"
+p.font.name = FONT_MONO
+p.font.size = Pt(9.5)
+p.font.bold = True
+p.font.color.rgb = COLOR_OLIVE
+p.space_before = Pt(8)
 
-# Right Area: 5 Photo Spread
-# Top Row
-add_image_card(slide9, Inches(4.85), top_pos, Inches(2.4), Inches(2.35),
+p = f_nv.add_paragraph()
+p.text = ("• Role: Lead Stage Anchor & Event Host\n"
+          "• Institution: SRMU Lucknow\n"
+          "• Scope: Flagship University Symposium\n"
+          "• Documentation: 5 Live Stage Frames Below")
+p.font.name = FONT_SANS
+p.font.size = Pt(10)
+p.font.color.rgb = COLOR_TEXT_DARK
+p.space_before = Pt(3)
+
+# Right Area: Prominent 5 Live Photo Spread (No Certificate)
+# Top Row: 3 Stage Frames across width 8.033 in
+add_image_card(slide9, Inches(4.5), top_pos, Inches(2.6), Inches(2.35),
                "presentation_assets/nova_1.jpg", "Frame 01: Stage Anchoring")
-add_image_card(slide9, Inches(7.45), top_pos, Inches(2.7), Inches(2.35),
+add_image_card(slide9, Inches(7.22), top_pos, Inches(2.8), Inches(2.35),
                "presentation_assets/nova_2.jpg", "Frame 02: Keynote & Audience")
-add_image_card(slide9, Inches(10.35), top_pos, Inches(2.183), Inches(2.35),
+add_image_card(slide9, Inches(10.14), top_pos, Inches(2.393), Inches(2.35),
                "presentation_assets/nova_3.jpg", "Frame 03: Organizing Desk")
 
-# Bottom Row
-add_image_card(slide9, Inches(4.85), top_pos + Inches(2.55), Inches(3.75), Inches(2.35),
+# Bottom Row: 2 Wide Stage Frames across width 8.033 in
+add_image_card(slide9, Inches(4.5), top_pos + Inches(2.55), Inches(3.95), Inches(2.35),
                "presentation_assets/nova_4.jpg", "Frame 04: Dignitary Felicitation")
-add_image_card(slide9, Inches(8.8), top_pos + Inches(2.55), Inches(3.733), Inches(2.35),
-               "presentation_assets/nova_5.jpg", "Frame 05: Host Portrait with Mic")
+add_image_card(slide9, Inches(8.583), top_pos + Inches(2.55), Inches(3.95), Inches(2.35),
+               "presentation_assets/nova_5.jpg", "Frame 05: Host Commemorative Portrait")
 
 # ==============================================================================
 # SLIDE 10: CURRICULUM VITAE & RECENT VISUAL FIX
