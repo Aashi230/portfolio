@@ -674,7 +674,7 @@ p.font.color.rgb = COLOR_TEXT_DARK
 p.space_before = Pt(8)
 
 p = f_abt.add_paragraph()
-p.text = ("• Left Dossier Card: In-depth narrative of Aashi's analytical journey from fundamental C/C++ "
+p.text = ("• Left Dossier Card: In-depth narrative of Aashi's analytical journey from fundamental C "
           "algorithms to statistical machine learning and data pipeline construction.\n"
           "• Right Identity Card: Features Aashi's student credential badge, official ID number, and verified "
           "passports from national events (GDG DevFest, Smart India Hackathon).")
@@ -798,7 +798,7 @@ p.font.size = Pt(10)
 p.font.bold = True
 p.font.color.rgb = COLOR_BURGUNDY
 p = tf_s1.add_paragraph()
-p.text = "Java • Python (Learning) • C • C++ • SQL"
+p.text = "Java • Python (Learning) • C • SQL"
 p.font.name = FONT_SERIF
 p.font.size = Pt(16)
 p.font.bold = True
@@ -806,7 +806,7 @@ p.font.color.rgb = COLOR_TEXT_DARK
 p = tf_s1.add_paragraph()
 p.text = ("• Java (Class 9–12 School Foundation): 4 years of Object-Oriented Programming, classes & methods.\n"
           "• Python (Active Learning): currently learning & applying for data analytics, EDA, and AI models.\n"
-          "• Strong algorithmic foundation in C/C++ (certified by SRMU CSE Department).\n"
+          "• Strong algorithmic foundation in C (certified by SRMU CSE Department).\n"
           "• Relational database querying and data modeling with SQL.")
 p.font.name = FONT_SANS
 p.font.size = Pt(11)
