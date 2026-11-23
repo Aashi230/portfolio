@@ -798,7 +798,7 @@ p.font.size = Pt(10)
 p.font.bold = True
 p.font.color.rgb = COLOR_BURGUNDY
 p = tf_s1.add_paragraph()
-p.text = "Java • Python (Learning) • C • C++ • SQL • JavaScript"
+p.text = "Java • Python (Learning) • C • C++ • SQL"
 p.font.name = FONT_SERIF
 p.font.size = Pt(16)
 p.font.bold = True
@@ -807,7 +807,7 @@ p = tf_s1.add_paragraph()
 p.text = ("• Java (Class 9–12 School Foundation): 4 years of Object-Oriented Programming, classes & methods.\n"
           "• Python (Active Learning): currently learning & applying for data analytics, EDA, and AI models.\n"
           "• Strong algorithmic foundation in C/C++ (certified by SRMU CSE Department).\n"
-          "• Relational database querying with SQL and modern ES6+ JavaScript for web interactivity.")
+          "• Relational database querying and data modeling with SQL.")
 p.font.name = FONT_SANS
 p.font.size = Pt(11)
 p.font.color.rgb = COLOR_TEXT_MUTED
@@ -852,7 +852,7 @@ p.font.size = Pt(10)
 p.font.bold = True
 p.font.color.rgb = COLOR_GOLD
 p = tf_s3.add_paragraph()
-p.text = "HTML5 • Modern CSS3 • REST APIs"
+p.text = "HTML5 • Modern CSS3 • Responsive Design"
 p.font.name = FONT_SERIF
 p.font.size = Pt(16)
 p.font.bold = True
@@ -860,8 +860,8 @@ p.font.color.rgb = COLOR_TEXT_DARK
 p = tf_s3.add_paragraph()
 p.text = ("• High-fidelity responsive web layout engineering (Desktop, Tablet, Mobile).\n"
           "• CSS custom properties, grid architectures, animations, deckled borders.\n"
-          "• Asynchronous HTTP requests via fetch() with JSON payloads.\n"
-          "• Accessible UI/UX design with semantic tags and keyboard navigation.")
+          "• Semantic HTML5 markup structure and multi-column archival pages.\n"
+          "• Accessible UI/UX design with clean typography and layout hierarchy.")
 p.font.name = FONT_SANS
 p.font.size = Pt(11)
 p.font.color.rgb = COLOR_TEXT_MUTED
