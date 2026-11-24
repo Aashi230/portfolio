@@ -11,7 +11,7 @@ Aesthetic Doctrine:
   (Completely excludes AI Mental Health Journaling).
 - All 5 Android Nova live stage photographs in broadside plates (no certificate, no official host badge).
 - 4-year Java foundation (Class 9-12) + active Python learning (no JS, no C++).
-- Candidate Identity: Undergraduate Student & Tech Learner (AI & DS) • Aspiring Data Analyst (8.29 CGPA).
+- Candidate Identity: Undergraduate Student & Tech Learner (AI & DS) • Aspiring Data Analyst (First Year CGPA: 8.29, Third Semester).
 """
 
 import os
@@ -299,7 +299,8 @@ p.space_before = Pt(2)
 p = tf_id.add_paragraph()
 p.text = ("• B.Tech in CSE (Artificial Intelligence & Data Science)\n"
           "• Shri Ramswaroop Memorial University (SRMU), Lucknow\n"
-          "• Academic Distinction: 8.29 CGPA • Class of 2029\n"
+          "• Current Standing: Second Year, Third Semester\n"
+          "• First Year Distinction: 8.29 CGPA • Class of 2029\n"
           "• Four-Year Java Heritage (Grades 9–12) + Active Python Stack")
 p.font.name = FONT_SANS
 p.font.size = Pt(10.5)
@@ -320,7 +321,7 @@ s_w = Inches(1.35)
 s_h = Inches(1.05)
 s_gap = Inches(0.12)
 
-add_vintage_seal(slide1, s_left, s_top, s_w, s_h, "8.29", "SRMU CGPA", color=COLOR_OXBLOOD)
+add_vintage_seal(slide1, s_left, s_top, s_w, s_h, "8.29", "1ST YR CGPA", color=COLOR_OXBLOOD)
 add_vintage_seal(slide1, s_left + s_w + s_gap, s_top, s_w, s_h, "SIH '26", "HACKATHON", color=COLOR_OLIVE)
 add_vintage_seal(slide1, s_left, s_top + s_h + s_gap, s_w, s_h, "4+", "PROJECTS", color=COLOR_GOLD)
 add_vintage_seal(slide1, s_left + s_w + s_gap, s_top + s_h + s_gap, s_w, s_h, "HOST", "ANDRO NOVA", color=COLOR_OXBLOOD)
@@ -366,7 +367,7 @@ p.font.color.rgb = COLOR_SEPIA_INK
 p.space_before = Pt(2)
 
 p = tf_abt.add_paragraph()
-p.text = ("• Collegiate Distinction: Second-year undergraduate pursuing B.Tech in Computer Science Engineering (Artificial Intelligence & Data Science) at SRMU Lucknow, holding a distinguished 8.29 CGPA.\n\n"
+p.text = ("• Collegiate Distinction: Undergraduate in Computer Science Engineering (Artificial Intelligence & Data Science) at SRMU Lucknow (Current Standing: Second Year, Third Semester), having achieved an outstanding First Year CGPA of 8.29.\n\n"
           "• Four-Year Java Heritage: Built core algorithmic problem-solving and structured programming through four continuous years of formal Java instruction from Class 9 to 12, mastering object-oriented classes and hierarchies.\n\n"
           "• Active Python Learning: Actively applying Python across data science, exploratory data analysis (EDA), data cleaning, statistical modeling, and machine learning.\n\n"
           "• Professional Aspirations: Combining the persistent curiosity of a Student & Tech Learner with industry goals as an Aspiring Data Analyst.")
@@ -388,7 +389,7 @@ p.font.size = Pt(8.5)
 p.font.bold = True
 p.font.color.rgb = COLOR_OXBLOOD
 p = tf_hi.add_paragraph()
-p.text = "B.Tech CSE (AI & DS) • SRMU Lucknow • 8.29 CGPA Distinction • Class of 2029"
+p.text = "B.Tech CSE (AI & DS) • SRMU Lucknow • 8.29 First Year CGPA • Third Semester (Class of 2029)"
 p.font.name = FONT_SANS
 p.font.size = Pt(9.5)
 p.font.bold = True
@@ -801,7 +802,7 @@ p.text = ("• Direct Email: aashimaahi23@gmail.com\n"
           "• Live Website: https://aashi230.github.io/portfolio/\n"
           "• GitHub Repository: github.com/Aashi230/portfolio\n"
           "• Academic Institution: SRMU Lucknow (Class of 2029)\n"
-          "• Academic Standing: 8.29 CGPA Distinction\n"
+          "• Academic Standing: Second Year, Third Semester (8.29 First Year CGPA)\n"
           "• Location: Lucknow, Uttar Pradesh, India")
 p.font.name = FONT_SANS
 p.font.size = Pt(10)
